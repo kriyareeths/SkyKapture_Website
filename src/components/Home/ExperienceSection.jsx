@@ -13,12 +13,16 @@ import santhoshresidence from '../../assets/Santhosh residence thumbnails.webp';
 import paramanresidence from '../../assets/Paraman Residence thumbnails.webp';
 import BPCL from '../../assets/BPCL thumbnails.webp';
 import dhiyajewellery from '../../assets/dhiyajewellery.webp';
+import santhosh2img from '../../assets/Santhosh residence thumb.webp';
+import vinothimg from '../../assets/Vinoth residence thumb.webp';
 
 import santhosh from '../../assets/santhoshSundakamuthur.mp4';
 import paraman from '../../assets/paramanresidency.mp4';
 import sridhaksha from '../../assets/Sri Daksha.mp4';
 import bpcl from '../../assets/Bpcl.mp4';
 import dhiyajewellerys from '../../assets/dhiyajewellery.mp4';
+import santhosh2 from '../../assets/santhoshresidency.mp4';
+import vinoth from '../../assets/vinothresidency.mp4';
 
 // Desktop-ல் Carousel சுத்துவதற்காக (Loop) டேட்டாவை அதிகப்படுத்தியுள்ளோம்
 const projects = [
@@ -57,42 +61,70 @@ const projects = [
     img: dhiyajewellery,
     video: dhiyajewellerys,
   },
-  // --- Duplicated Data for Infinite Scroll on Big Screens ---
   {
     id: 6,
+    title: 'Vinoth Residence',
+    location: 'Coimbatore',
+    img: vinothimg,
+    video: vinoth,
+  },
+  {
+    id: 7,
+    title: 'Santhosh Residence',
+    location: 'Coimbatore',
+    img: santhosh2img,
+    video: santhosh2,
+  },
+  // --- Duplicated Data for Infinite Scroll on Big Screens ---
+  {
+    id: 8,
     title: 'Mr Santhosh Residence',
     location: 'Coimbatore',
     img: santhoshresidence,
     video: santhosh,
   },
   {
-    id: 7,
+    id: 9,
     title: 'Mr Paraman Residence',
     location: 'Coimbatore',
     img: paramanresidence,
     video: paraman,
   },
   {
-    id: 8,
+    id: 10,
     title: 'Sri Daksha Residence',
     location: 'Coimbatore',
     img: sreedhaksa,
     video: sridhaksha,
   },
   {
-    id: 9,
+    id: 11,
     title: 'BPCL',
     location: 'Coimbatore',
     img: BPCL,
     video: bpcl,
   },
   {
-    id: 10,
+    id: 12,
     title: 'Diya Jewellery',
     location: 'Coimbatore',
     img: dhiyajewellery,
     video: dhiyajewellerys,
-  }
+  },
+    {
+    id: 13,
+    title: 'Vinoth Residence',
+    location: 'Coimbatore',
+    img: vinothimg,
+    video: vinoth,
+  },
+  {
+    id: 14,
+    title: 'Santhosh Residence',
+    location: 'Coimbatore',
+    img: santhosh2img,
+    video: santhosh2,
+  },
 ];
 
 const ExperienceSection = () => {

@@ -3,14 +3,101 @@
 @font-face {
   font-family: "Futura";
   src: url("../../../NewFonts/Futura Now Headline.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 @font-face {
-  font-family: "Futura";
+  font-family: "Futuraa";
   src: url("../../../NewFonts/Futura Now Headline.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 700!important;
 }
+
+@font-face {
+  font-family: "Futura Cyrillic";
+  src: url("fonts/FuturaCyrillicMedium.ttf") format("truetype");
+  font-weight: 400;
+}
+
+/* Bold weight kosam */
+@font-face {
+  font-family: "Futura Cyrillic";
+  src: url("fonts/FuturaCyrillicBold.ttf") format("truetype");
+  font-weight: 100;
+}
+
+.navbar-wrapper:not(.other-pages) .btn-text-part,
+.navbar-wrapper:not(.other-pages) .btn-arrow-part {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* Hover effect for white button */
+.navbar-wrapper:not(.other-pages) .btn-text-part:hover,
+.navbar-wrapper:not(.other-pages) .btn-arrow-part:hover {
+  background-color: #f0f0f0;
+}
+
+/* 2. Scroll pannum pothu button thirumba Yellow aagum */
+/* (Yen-na scroll aagum pothu Home page navbar white aagidum, appo white button theriyathu) */
+.navbar-wrapper.scrolled:not(.other-pages) .btn-text-part,
+.navbar-wrapper.scrolled:not(.other-pages) .btn-arrow-part {
+  background-color: #FCB037;
+  color: #111111;
+}
+
+/* Hover effect for scrolled yellow button */
+.navbar-wrapper.scrolled:not(.other-pages) .btn-text-part:hover,
+.navbar-wrapper.scrolled:not(.other-pages) .btn-arrow-part:hover {
+  background-color: #e5930e;
+}
+
+
+
+/* Class ki apply cheyadam */
+.nav-link {
+  font-family: "Futura Cyrillic", sans-serif;
+  font-weight: 600; /* Ippudu automatic ga FuturaCyrillicBold file apply avuthundi */
+  letter-spacing:1px;
+}
+
+.navbar-wrapper.other-pages .nav-link {
+  color: #222222; 
+}
+
+
+.navbar-wrapper.other-pages .nav-link:hover,
+.navbar-wrapper.other-pages .nav-link.active {
+  color: #f5b041 !important; 
+}
+/* ==========================================
+   🎯 DESKTOP SCROLL EFFECT (Big Screens Only)
+   ========================================== */
+@media (min-width: 801px) {
+  
+  /* 1. Default (Top la irukum pothu) - Transparent */
+  .nav-logo-box,
+  .nav-links-container {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  /* 2. Scroll pannuna apram - White Background */
+  .navbar-wrapper.scrolled .nav-logo-box,
+  .navbar-wrapper.scrolled .nav-links-container {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  }
+  .navbar-wrapper.scrolled .nav-link {
+    color: #222222 !important; 
+  }
+
+  .navbar-wrapper.scrolled .nav-link:hover,
+  .navbar-wrapper.scrolled .nav-link.active {
+  color: #f5b041 !important; 
+}
+}
+
 
 /* --- Main Navbar Header --- */
 .navbar-wrapper {
@@ -37,18 +124,18 @@
 }
 
 /* --- Logo Box --- */
+/* --- Logo Box --- */
 .nav-logo-box {
-  background-color: #ffffff;
-
+  background-color: transparent; /* White-a theva illana transparent aakikalam */
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+  box-shadow: none; /* Shadow theva illana remove pannidunga */
 }
 
 .nav-logo-box img {
-  height: 60px; 
+  height: 70px; /* 100px irunthatha 55px or 60px ku maathunga */
   object-fit: contain;
   display: block;
 }
@@ -65,6 +152,7 @@
 
 .nav-hamburger .bar {
   width: 22px;
+  
   height: 2.5px;
   background-color: #222222;
   border-radius: 3px;
@@ -78,6 +166,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   display: flex;
+  
   align-items: center;
   justify-content: center;
   gap: 35px;
@@ -85,11 +174,10 @@
 
 .nav-link {
   text-decoration: none;
-  color: #1e1d1d; 
-  font-weight: 400;
-  font-family: "Futura", sans-serif;
+  color: #FFFFFF; /* Ithu Home page ki default */
+  font-family: "Futuraa", sans-serif;
   font-size: 14px; 
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
   transition: color 0.3s ease;
   white-space: nowrap;
   text-transform: uppercase;
@@ -119,7 +207,8 @@
   padding: 6px 24px; 
   border-radius: 8px;
   cursor: pointer;
-
+  text-align:center;
+  
   font-size: 17px;
   font-weight: 500;
   font-family: 'futura', sans-serif;
@@ -166,6 +255,7 @@
   }
   .nav-link {
     font-size: 13px;
+    letter-spacing: 1.2px;
   }
   .nav-logo-box img {
     height: 50px;
@@ -179,6 +269,10 @@
     padding: 18px !important; 
     align-items: stretch;
     gap: 10px;
+  }
+
+  .nav-link{
+    color:#000000 !important;
   }
 
   .nav-mobile-header {
@@ -231,6 +325,11 @@
     align-items: center; 
   }
 
+   .navbar-wrapper.scrolled .nav-link:hover,
+  .navbar-wrapper.scrolled .nav-link.active {
+  color: #f5b041 !important; 
+}
+
   /* Show links when toggled */
   .nav-links-container.show-menu {
     display: flex !important;
@@ -241,6 +340,7 @@
   .nav-link {
     font-size: 25px; 
     font-weight: 500;
+    
   }
 
   /* --- Toggle Desktop and Mobile Buttons --- */

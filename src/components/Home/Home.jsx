@@ -15,7 +15,7 @@ const thumbs = [
     link: '#1',
     heading: 'We Design Your Dream',
     description: 'From the first nail to the final finish, spaces that feel like you, built with precision and passion.',
-    watermark: 'design'
+    watermark: 'Design'
   },
   {
     image: thumb1,
@@ -23,23 +23,23 @@ const thumbs = [
     link: '#2',
     heading: 'The Art of Living Well',
     description: 'Your home deserves more than furniture. It deserves a story crafted just for you.',
-    watermark: 'spaces'
+    watermark: 'Spaces'
   },
   {
     image: thumb3,
     title: 'Elegant Space',
     link: '#3',
-    heading: 'Spaces Crafted With Intention',
-    description: "Great design is more than aesthetics, it's about how a space makes you feel. We bring together beauty, function, and your personal story to create interiors that truly belong to you. Let's begin.",
-    watermark: 'vision'
+    heading: 'Spaces That Feel Right.',
+    description: "Spaces That Feel Like Home.'We don't just design rooms. We design the feeling you get when you walk in.",
+    watermark: 'Vision'
   },
   {
     image: thumb4,
-    title: 'Minimalist Dining',
+    title: 'Minimalist Elegance',
     link: '#4',
-    heading: 'Where Every Room Tells Your Story.',
-    description: 'From the first sketch to the final finish, we design spaces that reflect your personality, your lifestyle, and your vision.',
-    watermark: 'living'
+    heading: 'Design Beyond The Look.',
+    description: "We build spaces that feel as good as they appear, crafted around your life, your taste, and your home. Let's begin.",
+    watermark: 'Living'
   },
 ];
 
@@ -65,7 +65,7 @@ const Home = () => {
           key={`bg-${index}`}
           className={`hero-bg ${index === currentThumb ? 'active' : ''}`}
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url("${thumb.image}")`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url("${thumb.image}")`,
           }}
         ></div>
       ))} 
